@@ -1,9 +1,12 @@
+import os
+import subprocess
+
 from flask import Flask
 app = Flask(__name__)
 
 @app.route("/")
 def index():
-  return "index"
+  return subprocess.check_output(['mpc', 'current'])
 
 @app.route("/toggle")
 def toggle():
