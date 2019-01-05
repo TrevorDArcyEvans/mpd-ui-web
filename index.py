@@ -1,12 +1,12 @@
 import os
 import subprocess
 
-from flask import Flask
-app = Flask(__name__)
+from flask import Flask, request
+app = Flask(__name__, static_url_path='', static_folder='')
 
 @app.route("/")
 def index():
-  return current()
+  return app.send_static_file('index.html')
 
 @app.route("/toggle")
 def toggle():
@@ -23,6 +23,7 @@ def prev():
   os.system('mpc prev &')
   return current()
 
+@app.route("/current")
 def current():
   return subprocess.check_output(['mpc', 'current'])
 
