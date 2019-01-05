@@ -25,7 +25,8 @@ def prev():
 
 @app.route("/current")
 def current():
-  return subprocess.check_output(['mpc', 'current'])
+  msg = subprocess.check_output(['mpc']).split('\n')
+  return msg[0] + '\r\n' + msg[1]
 
 
 if __name__ == "__main__":
