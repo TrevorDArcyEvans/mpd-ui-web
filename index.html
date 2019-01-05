@@ -31,14 +31,33 @@
         padding: 32px 32px;
       }
     </style>
+
+    <script>
+      function OnButton(route)
+      {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function()
+        {
+          if (this.readyState == 4 && this.status == 200)
+          {
+            var current = document.getElementById('current');
+            current.innerText = this.responseText;
+          }
+        };
+        xhttp.open("GET", route, true);
+        xhttp.setRequestHeader("Content-type", "application/json");
+        xhttp.send();
+      }
+    </script>
   </head>
-  <body>
+
+  <body onload="OnButton('/current')">
     <h1 class="center">Music Box</h1>
     <h2 class="center border" id="current">Now playing...</h2>
     <div class="center">
-      <button type="button" class="button">< Previous</button>
-      <button type="button" class="button">Toggle |></button>
-      <button type="button" class="button">Next ></button>
+      <button type="button" class="button" onclick="OnButton('/prev')">< Previous</button>
+      <button type="button" class="button" onclick="OnButton('/toggle')">Toggle |></button>
+      <button type="button" class="button" onclick="OnButton('/next')">Next ></button>
     </div>
   </body>
 </html>
