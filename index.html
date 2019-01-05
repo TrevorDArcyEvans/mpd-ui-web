@@ -48,10 +48,16 @@
         xhttp.setRequestHeader("Content-type", "application/json");
         xhttp.send();
       }
+
+      function OnLoad()
+      {
+        OnButton('/current');
+        setInterval(function() { OnButton('/current'); }, 5000);
+      }
     </script>
   </head>
 
-  <body onload="OnButton('/current')">
+  <body onload="OnLoad()">
     <h1 class="center">Music Box</h1>
     <h2 class="center border" id="current">Now playing...</h2>
     <div class="center">
