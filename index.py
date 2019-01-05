@@ -7,14 +7,17 @@ def index():
 
 @app.route("/toggle")
 def toggle():
+  os.system('mpc toggle &')
   return "toggle"
 
 @app.route("/next")
 def next():
+  os.system('mpc next &')
   return "next"
 
 @app.route("/prev")
 def prev():
+  os.system('mpc prev &')
   return "prev"
 
 if __name__ == "__main__":
