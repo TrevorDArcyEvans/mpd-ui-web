@@ -29,12 +29,12 @@ def current():
   return msg[0] + '\r\n' + msg[1]
 
 @app.route("/volup")
-def prev():
+def volup():
   os.system('amixer set Speaker 5%+ &')
   return current()
 
 @app.route("/voldown")
-def prev():
+def voldown():
   os.system('amixer set Speaker 5%- &')
   return current()
 
