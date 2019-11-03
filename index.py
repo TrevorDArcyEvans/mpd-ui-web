@@ -28,6 +28,16 @@ def current():
   msg = subprocess.check_output(['mpc']).split('\n')
   return msg[0] + '\r\n' + msg[1]
 
+@app.route("/volup")
+def prev():
+  os.system('amixer set Speaker 5%+ &')
+  return current()
+
+@app.route("/voldown")
+def prev():
+  os.system('amixer set Speaker 5%- &')
+  return current()
+
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=8080)

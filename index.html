@@ -27,6 +27,13 @@
         margin: 32px 32px;
       }
 
+      .table
+      {
+        position: relative;
+        top: 155px;
+        display: inline-block;
+      }
+
       .border
       {
         border: 3px solid;
@@ -66,6 +73,14 @@
       <button type="button" class="button" onclick="OnButton('/prev')">< Previous</button>
       <button type="button" class="button" onclick="OnButton('/toggle')">Toggle |></button>
       <button type="button" class="button" onclick="OnButton('/next')">Next ></button>
+      <table class="table">
+          <tr>
+            <td><button type="button" class="button" onclick="OnButton('/volup')">Vol+</button></td>
+          </tr>
+          <tr>
+            <td><button type="button" class="button" onclick="OnButton('/voldown')">Vol-</button></td>
+          </tr>
+      </table>
     </div>
   </body>
 </html>
