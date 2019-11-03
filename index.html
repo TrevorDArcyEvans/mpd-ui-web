@@ -34,6 +34,13 @@
         display: inline-block;
       }
 
+      .controls
+      {
+        position: relative;
+        top: -155px;
+        display: inline-block;
+      }
+
       .border
       {
         border: 3px solid;
@@ -69,7 +76,7 @@
   <body onload="OnLoad()">
     <h1 class="center">Music Box</h1>
     <h2 class="center border" id="current">Now playing...</h2>
-    <div class="center">
+    <div class="center controls">
       <button type="button" class="button" onclick="OnButton('/prev')">< Previous</button>
       <button type="button" class="button" onclick="OnButton('/toggle')">Toggle |></button>
       <button type="button" class="button" onclick="OnButton('/next')">Next ></button>
