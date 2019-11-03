@@ -27,6 +27,19 @@
         margin: 32px 32px;
       }
 
+      .vol-button
+      {
+        background-color: black;
+        color: white;
+        border-radius: 50%;
+        padding: 32px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 32px 32px;
+      }
+
       .table
       {
         position: relative;
@@ -83,10 +96,10 @@
       <button type="button" class="button" onclick="OnButton('/next')">Next ></button>
       <table class="table">
           <tr>
-            <td><button type="button" class="button" onclick="OnButton('/volup')">Vol+</button></td>
+            <td><button type="button" class="vol-button" onclick="OnButton('/volup')">Vol+</button></td>
           </tr>
           <tr>
-            <td><button type="button" class="button" onclick="OnButton('/voldown')">Vol-</button></td>
+            <td><button type="button" class="vol-button" onclick="OnButton('/voldown')">Vol-</button></td>
           </tr>
       </table>
     </div>
