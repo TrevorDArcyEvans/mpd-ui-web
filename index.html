@@ -2,6 +2,7 @@
 <html>
   <head>
     <link rel="icon" href="amplifier.png">
+    <link href="css/all.css" rel="stylesheet"> <!--load all styles -->
 
     <style>
       *
@@ -16,27 +17,12 @@
 
       .button
       {
-        background-color: black;
-        color: white;
         border-radius: 12px;
         padding: 32px 32px;
         text-align: center;
         text-decoration: none;
         display: inline-block;
-        font-size: 16px;
-        margin: 32px 32px;
-      }
-
-      .vol-button
-      {
-        background-color: black;
-        color: white;
-        border-radius: 50%;
-        padding: 32px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
+        font-size: 48px;
         margin: 32px 32px;
       }
 
@@ -91,15 +77,15 @@
     <h1 class="center">Music Box</h1>
     <h2 class="center border" id="current">Now playing...</h2>
     <div class="center controls">
-      <button type="button" class="button" onclick="OnButton('/prev')">< Previous</button>
-      <button type="button" class="button" onclick="OnButton('/toggle')">Toggle |></button>
-      <button type="button" class="button" onclick="OnButton('/next')">Next ></button>
+      <button type="button" class="fas fa-step-backward button" onclick="OnButton('/prev')"></button>
+      <button type="button" class="fas fa-play button" onclick="OnButton('/toggle')"></button>
+      <button type="button" class="fas fa-step-forward button" onclick="OnButton('/next')"></button>
       <table class="table">
           <tr>
-            <td><button type="button" class="vol-button" onclick="OnButton('/volup')">Vol+</button></td>
+            <td><button type="button" class="fas fa-volume-up button" onclick="OnButton('/volup')"></button></td>
           </tr>
           <tr>
-            <td><button type="button" class="vol-button" onclick="OnButton('/voldown')">Vol-</button></td>
+            <td><button type="button" class="fas fa-volume-down button" onclick="OnButton('/voldown')"></button></td>
           </tr>
       </table>
     </div>
