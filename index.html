@@ -58,6 +58,8 @@
           {
             var current = document.getElementById('current');
             current.innerText = this.responseText;
+            var toggle = document.getElementById('toggle');
+            toggle.className = this.responseText.includes('[paused]') ? "fas fa-pause button" : "fas fa-play button";
           }
         };
         xhttp.open("GET", route, true);
@@ -78,7 +80,7 @@
     <h2 class="center border" id="current">Now playing...</h2>
     <div class="center controls">
       <button type="button" class="fas fa-step-backward button" onclick="OnButton('/prev')"></button>
-      <button type="button" class="fas fa-play button" onclick="OnButton('/toggle')"></button>
+      <button type="button" class="fas fa-play button"  id="toggle" onclick="OnButton('/toggle')"></button>
       <button type="button" class="fas fa-step-forward button" onclick="OnButton('/next')"></button>
       <table class="table">
           <tr>
