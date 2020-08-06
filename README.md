@@ -14,7 +14,7 @@ Various scripts are run on system startup from:
 
 <details>
 
-````bash
+```bash
 #!/bin/sh -e
 #
 # rc.local
@@ -39,7 +39,7 @@ sudo /home/trevorde/mpd-ui/WhatsPlaying.py &
 sudo python /home/trevorde/mpd-ui-web/index.py &
 
 exit 0
-````
+```
 
 </details>
 <br />
@@ -49,7 +49,8 @@ mpd is controlled by a config file at:
 ``/etc/mpd.conf``
 
 <details>
-````
+
+```
 # An example configuration file for MPD.
 # Read the user manual for documentation: http://www.musicpd.org/doc/user/
 # or /usr/share/doc/mpd/user-manual.html
@@ -180,5 +181,6 @@ filesystem_charset		"UTF-8"
 id3v1_encoding			"UTF-8"
 #
 ###############################################################################
-````
+```
+
 </details>
