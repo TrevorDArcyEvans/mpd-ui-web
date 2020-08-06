@@ -181,6 +181,12 @@ filesystem_charset		"UTF-8"
 id3v1_encoding			"UTF-8"
 #
 ###############################################################################
+
+# tweaks to handle large music collections
+connection_timeout	"180"
+max_playlist_length	"65536"
+max_command_list_size	"16384"
+max_output_buffer_size	"16384"
 ```
 
 </details>
